@@ -16,6 +16,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Vernon Family",
   description: "Practical AI for Your Practice. Implemented.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
