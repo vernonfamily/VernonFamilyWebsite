@@ -59,6 +59,12 @@ body {
     order: unset !important;
   }
 
+  /* Founder: single column */
+  .founder-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
   /* About: single column */
   .about-grid {
     grid-template-columns: 1fr !important;
