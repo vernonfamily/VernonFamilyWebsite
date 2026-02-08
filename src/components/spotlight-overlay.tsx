@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { spotlightPos } from "../lib/spotlight-state";
 
 interface Echo {
@@ -11,7 +11,6 @@ interface Echo {
 }
 
 export default function SpotlightOverlay() {
-  const [isTouch, setIsTouch] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   const mouse = useRef({ x: -300, y: -300 });
@@ -24,15 +23,6 @@ export default function SpotlightOverlay() {
 
   const R = 130;
   const LERP = 0.1;
-
-  // Detect touch-only devices
-  useEffect(() => {
-    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-    setIsTouch(!mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsTouch(!e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
 
   const tick = useCallback(() => {
     const canvas = canvasRef.current;
@@ -105,8 +95,6 @@ export default function SpotlightOverlay() {
   }, []);
 
   useEffect(() => {
-    if (isTouch) return;
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -143,10 +131,7 @@ export default function SpotlightOverlay() {
       document.removeEventListener("mouseleave", onLeave);
       cancelAnimationFrame(frame.current);
     };
-  }, [tick, isTouch]);
-
-  // Don't render anything on touch devices
-  if (isTouch) return null;
+  }, [tick]);
 
   return (
     <>

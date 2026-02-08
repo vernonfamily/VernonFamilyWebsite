@@ -7,7 +7,7 @@ import SpotlightOverlay from "@/components/spotlight-overlay";
 
 export default function Home() {
   return (
-    <main style={{ overflowY: "auto", overflowX: "hidden" }}>
+    <main style={{ overflowY: "auto", overflowX: "hidden", cursor: "none" }}>
       <Hero />
       <Services />
       <Proof />

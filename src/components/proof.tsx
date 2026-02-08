@@ -27,27 +27,27 @@ const clients = [
 
 export default function Proof() {
   return (
-    <section className="relative bg-white text-[#0a0a0a] py-16 px-5 md:py-32 md:px-8">
+    <section className="relative bg-white text-[#0a0a0a]" style={{ padding: "8rem 2rem" }}>
       <GridBg animate />
-      <div className="max-w-[1100px] mx-auto relative z-[1]">
+      <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-12 md:mb-20"
+          style={{ marginBottom: "5rem" }}
         >
           <p className="font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(0,0,0,0.4)", marginBottom: "1rem" }}>
             Proof
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)", fontWeight: 600, lineHeight: 1.1 }}>
+          <h2 className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2.5rem, 5vw, 3.75rem)", fontWeight: 600, lineHeight: 1.1 }}>
             Real Results,
             <br />
             Real Businesses
           </h2>
         </motion.div>
 
-        <div className="flex flex-col gap-12 md:gap-24">
+        <div style={{ display: "flex", flexDirection: "column", gap: "6rem" }}>
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
@@ -55,9 +55,14 @@ export default function Proof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "4rem",
+                alignItems: "center",
+              }}
             >
-              <div style={{ order: 1 }} className={i % 2 === 1 ? "md:order-2" : "md:order-1"}>
+              <div style={{ order: i % 2 === 1 ? 2 : 1 }}>
                 <div style={{ position: "relative", aspectRatio: "4/3", borderRadius: "12px", overflow: "hidden" }}>
                   <RevealImage
                     src={client.image}
@@ -67,8 +72,8 @@ export default function Proof() {
                 </div>
               </div>
 
-              <div style={{ order: 2 }} className={i % 2 === 1 ? "md:order-1" : "md:order-2"}>
-                <blockquote className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)", lineHeight: 1.6, color: "#0a0a0a", marginBottom: "2rem" }}>
+              <div style={{ order: i % 2 === 1 ? 1 : 2 }}>
+                <blockquote className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(1.25rem, 2vw, 1.5rem)", lineHeight: 1.6, color: "#0a0a0a", marginBottom: "2rem" }}>
                   &ldquo;{client.quote}&rdquo;
                 </blockquote>
 
@@ -81,7 +86,7 @@ export default function Proof() {
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
                   {client.results.map((result) => (
                     <span
                       key={result}

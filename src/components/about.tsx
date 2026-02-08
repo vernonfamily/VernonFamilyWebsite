@@ -5,9 +5,9 @@ import GridBg from "./grid-bg";
 
 export default function About() {
   return (
-    <section className="relative bg-[#0a0a0a] text-white py-16 px-5 md:py-32 md:px-8">
+    <section className="relative bg-[#0a0a0a] text-white" style={{ padding: "8rem 2rem" }}>
       <GridBg dark animate />
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start relative z-[1]">
+      <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start", position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export default function About() {
           <p className="font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: "1rem" }}>
             Our Approach
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)", fontWeight: 600, lineHeight: 1.1 }}>
+          <h2 className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2.5rem, 5vw, 3.75rem)", fontWeight: 600, lineHeight: 1.1 }}>
             We Build on
             <br />
             Practice, Not
@@ -43,9 +43,9 @@ export default function About() {
             workflows, and build AI systems that fit how you actually operate.
           </p>
 
-          <div className="grid grid-cols-2 gap-6 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", paddingTop: "2rem", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
             <div className="stat-invert" style={{ cursor: "pointer" }}>
-              <p className="stat-number font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "white" }}>
+              <p className="stat-number font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2.5rem, 4vw, 3.25rem)", fontWeight: 600, color: "white" }}>
                 40<span className="stat-percent" style={{ color: "rgba(255,255,255,0.3)" }}>%</span>
               </p>
               <p className="stat-label font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginTop: "0.5rem" }}>
@@ -53,7 +53,7 @@ export default function About() {
               </p>
             </div>
             <div className="stat-invert" style={{ cursor: "pointer" }}>
-              <p className="stat-number font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "white" }}>
+              <p className="stat-number font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2.5rem, 4vw, 3.25rem)", fontWeight: 600, color: "white" }}>
                 100<span className="stat-percent" style={{ color: "rgba(255,255,255,0.3)" }}>%</span>
               </p>
               <p className="stat-label font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginTop: "0.5rem" }}>

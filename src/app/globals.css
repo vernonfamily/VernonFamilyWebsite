@@ -22,10 +22,3 @@ body {
   color: #171717;
   font-family: var(--font-inter), sans-serif;
 }
-
-/* Only hide cursor on devices with a mouse */
-@media (hover: hover) and (pointer: fine) {
-  main {
-    cursor: none;
-  }
-}

@@ -32,25 +32,25 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="solutions" className="relative bg-[#0a0a0a] text-white py-16 px-5 md:py-32 md:px-8">
+    <section id="solutions" className="relative bg-[#0a0a0a] text-white" style={{ padding: "8rem 2rem" }}>
       <GridBg dark animate />
-      <div className="max-w-[1100px] mx-auto relative z-[1]">
+      <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-center mb-12 md:mb-20"
+          style={{ textAlign: "center", marginBottom: "5rem" }}
         >
           <p className="font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: "1rem" }}>
             What We Do
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)", fontWeight: 600, lineHeight: 1.1 }}>
+          <h2 className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(2.5rem, 5vw, 3.75rem)", fontWeight: 600, lineHeight: 1.1 }}>
             Our Solutions
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "2rem" }}>
           {services.map((service, i) => (
             <motion.div
               key={service.number}
@@ -62,7 +62,7 @@ export default function Services() {
               style={{
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "12px",
-                padding: "clamp(1.5rem, 4vw, 3rem)",
+                padding: "3rem",
                 backgroundColor: "rgba(255,255,255,0.02)",
                 cursor: "pointer",
               }}
@@ -70,7 +70,7 @@ export default function Services() {
               <span className="card-number font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", display: "block", marginBottom: "1.5rem" }}>
                 {service.number}
               </span>
-              <h3 className="card-title font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.875rem)", fontWeight: 500, marginBottom: "1rem", lineHeight: 1.2, color: "white" }}>
+              <h3 className="card-title font-[family-name:var(--font-playfair)]" style={{ fontSize: "clamp(1.5rem, 2.5vw, 1.875rem)", fontWeight: 500, marginBottom: "1rem", lineHeight: 1.2, color: "white" }}>
                 {service.title}
               </h3>
               <p className="card-desc font-[family-name:var(--font-inter)]" style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "rgba(255,255,255,0.45)" }}>
