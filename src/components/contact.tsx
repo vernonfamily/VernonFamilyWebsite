@@ -8,7 +8,7 @@ export default function Contact() {
     <section className="relative bg-white text-[#0a0a0a]" style={{ padding: "8rem 2rem" }}>
       <GridBg animate />
       <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "end" }}>
+        <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "end" }}>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,6 +105,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
+          className="footer-bar"
           style={{ marginTop: "8rem", paddingTop: "2rem", borderTop: "1px solid rgba(0,0,0,0.08)", display: "flex", justifyContent: "space-between", alignItems: "center" }}
         >
           <p className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "1.1rem", fontWeight: 600 }}>

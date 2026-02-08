@@ -22,3 +22,60 @@ body {
   color: #171717;
   font-family: var(--font-inter), sans-serif;
 }
+
+/* ─── Mobile responsive overrides ─── */
+@media (max-width: 768px) {
+  /* Restore normal cursor on touch/mobile */
+  main {
+    cursor: auto !important;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 4rem 1.25rem !important;
+  }
+
+  /* Hero bottom bar: stack vertically */
+  .hero-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+    padding: 0 1.25rem 1.5rem !important;
+  }
+
+  /* Services: single column */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Proof testimonials: single column, image first */
+  .proof-item {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .proof-item > div {
+    order: unset !important;
+  }
+
+  /* About: single column */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Contact: single column */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Footer: stack */
+  .footer-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    margin-top: 4rem !important;
+  }
+}

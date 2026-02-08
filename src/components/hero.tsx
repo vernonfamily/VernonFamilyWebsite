@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", padding: "0 2.5rem 2.5rem" }}>
+        <div className="hero-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", padding: "0 2.5rem 2.5rem" }}>
           <p
             className="font-[family-name:var(--font-inter)]"
             style={{ fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 300, color: "#111111" }}

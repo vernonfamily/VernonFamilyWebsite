@@ -55,6 +55,7 @@ export default function Proof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
+              className="proof-item"
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",

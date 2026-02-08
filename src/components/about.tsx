@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section className="relative bg-[#0a0a0a] text-white" style={{ padding: "8rem 2rem" }}>
       <GridBg dark animate />
-      <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start", position: "relative", zIndex: 1 }}>
+      <div className="about-grid" style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start", position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
