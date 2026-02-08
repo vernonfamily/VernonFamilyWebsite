@@ -20,7 +20,7 @@ const clients = [
     image: "/dr-phetla.jpg",
     objectPosition: "top",
     quote:
-      "Working with Vernon Family was a turning point. They understood our practice inside out and built systems that actually work for us.",
+      "Working with Vernon Family was a great investment for us because of their competency, innovative approach and work ethic.",
     results: ["Reduced no-shows", "Faster billing cycles", "Happier team"],
   },
 ];
