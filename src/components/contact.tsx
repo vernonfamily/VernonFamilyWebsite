@@ -7,13 +7,14 @@ export default function Contact() {
   return (
     <section id="book" className="relative bg-[#0a0a0a] text-white" style={{ padding: "8rem 2rem" }}>
       <GridBg dark animate />
-      <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative" }}>
         <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            style={{ position: "relative", zIndex: 1 }}
           >
             <p className="font-[family-name:var(--font-inter)]" style={{ fontSize: "0.7rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: "1rem" }}>
               Get Started
@@ -72,18 +73,18 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Calendly Widget */}
+          {/* Calendly Widget — z-index 9999 to sit above the difference-blend spotlight canvas (9998) */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            style={{ borderRadius: "12px", overflow: "hidden", backgroundColor: "white" }}
+            style={{ position: "relative", zIndex: 9999, borderRadius: "12px", overflow: "hidden", backgroundColor: "white" }}
           >
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/vernonfamilysolutions/30min?primary_color=000000"
-              style={{ minWidth: "320px", height: "700px" }}
+              style={{ minWidth: "320px", height: "580px" }}
             />
           </motion.div>
         </div>
@@ -94,7 +95,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="footer-bar"
-          style={{ marginTop: "8rem", paddingTop: "2rem", borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+          style={{ position: "relative", zIndex: 1, marginTop: "8rem", paddingTop: "2rem", borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", alignItems: "center" }}
         >
           <p className="font-[family-name:var(--font-playfair)]" style={{ fontSize: "1.1rem", fontWeight: 600 }}>
             Vernon Family
