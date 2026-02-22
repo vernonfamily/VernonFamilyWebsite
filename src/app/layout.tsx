@@ -29,6 +29,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${inter.variable} antialiased`}>
         {children}
         <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
+        <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload" />
       </body>
     </html>
   );
