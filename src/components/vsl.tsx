@@ -41,6 +41,22 @@ export default function Vsl() {
             </video>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          style={{ textAlign: "center", marginTop: "3rem", position: "relative", zIndex: 1 }}
+        >
+          <a
+            href="#book"
+            className="font-[family-name:var(--font-inter)] hover:opacity-80 transition-opacity duration-300"
+            style={{ display: "inline-block", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 500, color: "#0a0a0a", textDecoration: "none", backgroundColor: "white", padding: "0.875rem 2.25rem", borderRadius: "999px" }}
+          >
+            Book a Call
+          </a>
+        </motion.div>
       </div>
     </section>
   );
