@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import Vsl from "@/components/vsl";
 import Services from "@/components/services";
 import Proof from "@/components/proof";
 import About from "@/components/about";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main style={{ overflowY: "auto", overflowX: "hidden", cursor: "none" }}>
       <Hero />
+      <Vsl />
       <Services />
       <Proof />
       <About />
