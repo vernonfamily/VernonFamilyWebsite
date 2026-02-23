@@ -15,13 +15,13 @@ const clients = [
     results: ["40% less admin time", "Streamlined patient flow", "Automated follow-ups"],
   },
   {
-    name: "Dr. Phetla",
-    role: "Dr. Boitumelo Wellness",
-    image: "/dr-phetla.jpg",
-    objectPosition: "top",
+    name: "Grassroots Finance",
+    role: "Accounting Firm",
+    image: "/GrassRoots%20Finance%20Logo.jpeg",
+    objectPosition: "center",
     quote:
-      "Working with Vernon Family was a great investment for us because of their competency, innovative approach and work ethic.",
-    results: ["Reduced no-shows", "Faster billing cycles", "Happier team"],
+      "Because of Vernon Family, we were able to scale more efficiently, onboard new clients faster, and consistently deliver high-quality service at speed.",
+    results: ["Scaled efficiently", "Faster client onboarding", "High-quality service"],
   },
 ];
 
