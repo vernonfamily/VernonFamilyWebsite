@@ -30,14 +30,14 @@ export default function Vsl() {
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
           style={{ position: "relative", zIndex: 9999 }}
         >
-          <div style={{ borderRadius: "12px", overflow: "hidden", boxShadow: "0 8px 40px rgba(0,0,0,0.12)", padding: "75% 0 0 0", position: "relative" }}>
+          <div style={{ borderRadius: "12px", overflow: "hidden", boxShadow: "0 8px 40px rgba(0,0,0,0.12)", padding: "56.25% 0 0 0", position: "relative" }}>
             <iframe
-              src="https://player.vimeo.com/video/1167069396?badge=0&autopause=0&player_id=0&app_id=58479"
+              src="https://player.vimeo.com/video/1167294006?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-              title="VSL Vernon Family"
+              title="Welcome to Vernon Family"
             />
           </div>
         </motion.div>
